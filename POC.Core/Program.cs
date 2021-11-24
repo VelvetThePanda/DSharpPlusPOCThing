@@ -3,10 +3,13 @@ using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
 using DSharpPlus;
+using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using POC.MediatR;
+using POC.MediatR.Requests;
 using Serilog;
 using Serilog.Events;
 using Serilog.Templates;
@@ -28,7 +31,8 @@ namespace POC.Core
 			host.ConfigureServices((c, s) =>
 			{
 				s.AddLogging(l => l.ClearProviders().AddSerilog());
-
+				s.AddMediatR(typeof(IAssemblyMarker));
+				
 				Log.Logger = new LoggerConfiguration()
 					.MinimumLevel.Debug()
 					.WriteTo.Console(new ExpressionTemplate("[{@t:h:mm:ss ff tt}] [{@l:u3}]{#if EventId is not null} [{EventId.Name}]{#end} [{Substring(SourceContext, LastIndexOf(SourceContext, '.') + 1)}] {@m}\n{@x}"))
@@ -53,7 +57,7 @@ namespace POC.Core
 				
 			});
 
-			await host.UseConsoleLifetime().RunConsoleAsync();
+			await host.UseConsoleLifetime().Build().RunAsync();
 		}
 	}
 }
