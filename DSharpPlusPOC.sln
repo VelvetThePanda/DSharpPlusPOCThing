@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POC.Core", "POC.Core\POC.Core.csproj", "{4C1F7D11-F66F-4D60-B06B-46329BB96B08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POC.MediatR", "POC.MediatR\POC.MediatR.csproj", "{ACF8500C-C2CC-4238-9366-194A64C886AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C1F7D11-F66F-4D60-B06B-46329BB96B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C1F7D11-F66F-4D60-B06B-46329BB96B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C1F7D11-F66F-4D60-B06B-46329BB96B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C1F7D11-F66F-4D60-B06B-46329BB96B08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF8500C-C2CC-4238-9366-194A64C886AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF8500C-C2CC-4238-9366-194A64C886AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF8500C-C2CC-4238-9366-194A64C886AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF8500C-C2CC-4238-9366-194A64C886AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
