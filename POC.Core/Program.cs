@@ -1,3 +1,4 @@
 ﻿using System;
+using Microsoft.Extensions.Hosting;
 
-Console.WriteLine("Hello World!");
+var host = Host.CreateDefaultBuilder();
